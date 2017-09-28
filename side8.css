@@ -1,0 +1,21 @@
+div div:nth-child() span {
+    color:purple;
+}
+
+p::first-letter {
+    color:aquamarine;
+    font-size:4em;
+    font-family: comic sans ms;
+
+
+}
+
+#innhold4 {
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    width: 80%;
+    height: 85%;
+    background-color: navy;
+    color: darkorchid
+}

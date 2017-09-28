@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lol.css">
+</head>
+
+<body>
+    <div id="tittel">
+        <h1> Info </h1>
+    </div>
+
+    <div id="innhold">
+
+    <table>
+            <caption>Info</caption>
+            <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Etternavn</th>
+                    <th>Tlf nummer</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Bob</td>
+                <td>Bernard</td>
+                <td>6969691337</td>
+                <td>noob@mail.com</td>
+            </tr>
+            <tr>
+
+        </table>
+    </div>
+    <div id="meny"> <br>
+        <ul>
+            <li> <a href="index.html">  Back</a></li>
+        </ul>
+
+        <form id="skjema">
+            <br> <label> Fornavn<input id="Fornavn" type=" text "></label>
+            <br> Etternavn <input type="text ">
+            <br> Addresse <input type="text ">
+            <br> Alder <input type="number ">
+           
+        </form>
+        <input type="radio" name="gender " value="Male "> Male <br>
+        <input type="radio" name="gender " value="Female "> Female <br>
+        <input type="radio" name="gender " value="other "> Other <br>
+ <br>
+            <button id="lagre" type="button "> Lagre </button>
+            <br>
+        <script>
+            let btn = document.getElementById("lagre");
+            btn.addEventListener("click", lagreData);
+
+            function lagreData() {
+                let Fornavn = document.getElementById("Fornavn").value;
+                alert("Hei " + Fornavn);
+            }
+        </script>
+        <br>
+
+        </form>
+
+
+
+
+</body>
+
+</html>

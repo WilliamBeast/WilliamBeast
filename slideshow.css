@@ -1,0 +1,38 @@
+
+
+:root {
+    --slideshow---bg: Aquamarine; 
+}
+
+#innhold3 {
+    
+    width: 1000px;
+    height: 800px;
+}
+
+#slideshow {
+    background: url("weirdpepe.png");
+    position: relative;
+    left: 2em;
+    top:2em;
+    left: 30%;
+    top:15%;
+    width: calc(100% - 4em);
+    height: calc(90% - 4em);
+    border: 2px solid purple;
+    border-radius: 2em;
+    background-color: var(--slideshow-bg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: slideshow 6s steps(1) infinite alternate;
+
+}
+
+@keyframes slideshow {
+    0% { background-image: url("rarepepe.jpg")}
+    33% { background-image: url("sadpepe.jpeg")}
+    66% { background-image: url("weirdpepe.png")}
+}
+
+
