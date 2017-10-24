@@ -1,0 +1,118 @@
+#tittel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15%;
+background: url("purple.jpg");
+text-shadow: 3px 3px rgba(250,250,250,0.7);
+text-align: center;
+Font-size: 2em;
+Font-family: "comic sans ms";
+
+}
+
+#meny li a {
+    text-decoration: none;
+    color:whitesmoke;
+    display: block;
+    margin: 8px;
+    text-align: center;
+    padding-top:10px;
+    height: 2em;
+    background:linear-gradient(45deg, rgba(52,247,215,1) 0%, rgba(126,14,143,0.8) 51%, rgba(48,230,39,0.6) 100%);
+    Font-family:"impact";
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+
+        }
+
+        #meny {
+            position: absolute;
+            left: 0%;
+            top: 15%;
+            width: 20%;
+            height: 1000px;
+        background: gray;
+        background: url("lightbg.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        }
+
+        #meny li {
+            list-style: none;
+        }
+
+        #innhold {
+            position: absolute;
+            right: 0%;
+            top: 15%;
+            width: 80%;
+            height: 1000px;
+        background: #7FFFD3;
+        background: url("lightbg.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+         }
+
+#flex {
+
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: url("lightbg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: stretch;
+}
+
+#flex div {
+background: #A310CC;
+width: 10em;
+height: 10em;
+margin: 1em;
+
+}
+    
+
+#ram {
+
+    right: 25%;
+    top: 25%;
+    width: 25%;
+    height: 25%;
+background: url("ram.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+   }
+
+   #svg {
+       background: url("Svg.png");
+       right: 20%;
+       position: absolute;
+   }
