@@ -1,0 +1,21 @@
+main {
+    
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-column-gap: 15px;
+        grid-gap: 50px;
+        grid-auto-rows: minmax(200px, auto);
+
+}
+
+
+header {
+
+    color: black;
+    font-size: 1.2em;
+    padding: var (--fyll);
+    padding-bottom: 20px;
+    Font-family: "verdana";
+    text-align: center;
+
+}
