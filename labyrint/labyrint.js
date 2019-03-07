@@ -1,4 +1,4 @@
-var boundaries = document.querySelectorAll(".boundary,.movingbox1,.movingbox2,.movingbox3");
+var boundaries = document.querySelectorAll(".boundary,.movingbox1,.movingbox2,.movingbox3,.movingbox4,.movingbox5,.movingbox6,.movingbox7,.movingbox8,.movingbox9,.movingbox10,.movingbox11,.movingbox12,.movingbox13,.movingbox14,.movingbox15,.movingbox16");
 var start = document.querySelector("#start");
 var end = document.querySelector("#end");
 var status = document.querySelector("#status");
