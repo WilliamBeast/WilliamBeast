@@ -1,0 +1,598 @@
+h1,
+h2 {
+    text-align: center;
+}
+
+p {
+    width: 600px;
+    margin: 1em auto;
+}
+
+#maze {
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 500px;
+}
+
+#start,
+#end {
+    position: absolute;
+    top: 205px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#maze #start {
+    background-color: #56ec56;
+    left: -13.5em;
+    top: 25.5em;
+}
+
+#maze #end {
+    background-color: #b3b3ff;
+    right: -19.5em;
+    top: 0em;
+}
+
+div.boundary {
+    background-color: #008B8B;
+    border: 1px solid black;
+    width: 50px;
+    text-align: center;
+}
+
+#timer {
+    background-color: #eeeeee;
+    border: 1px solid black;
+    margin: auto;
+    padding: 1px;
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    top: 1em;
+}
+
+
+
+
+/*
+dette er div for alle veggene som eksisterer, hver div representerer en del av en vegg.*/
+
+#maze div.boundary {
+    position: absolute;
+    top: 0;
+    left: -30em;
+    height: 200px;
+    width: 39.5em;
+    z-index: 1;
+}
+
+#maze div.boundary+div.boundary {
+    border-left: none;
+    border-right: none;
+    z-index: 2;
+    left: 151px;
+    height: 50px;
+    width: 198px;
+}
+
+#maze div.boundary+div.boundary+div.boundary {
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    z-index: 1;
+    left: 348px;
+    height: 215px;
+    width: 35.9em;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary {
+    border: 1px black solid;
+    top: 250px;
+    left: -15em;
+    height: 250px;
+    width: 76em;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-bottom: none;
+    top: 100px;
+    left: 200px;
+    height: 150px;
+    width: 98px;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    border-top: none;
+    top: 12.5em;
+    left: -30em;
+    height: 30.5em;
+    width: 153px;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    top: 12.5em;
+    left: -14em;
+    height: 2em;
+    width: 1em;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+    background-color:red;
+
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: none;
+    top: 13.7em;
+    left: -10em;
+    height: 2em;
+    width: 1em;
+    background-color:orange;
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-bottom: 1px black solid;
+    border-top:none;
+    top: 12.5em;
+    left: -6em;
+    height: 2em;
+    width: 1em;
+    background-color:yellow;
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 1px black solid;
+    border-bottom: none;
+    top: 13.7em;
+    left: -2em;
+    height: 2em;
+    width: 1em;
+    background-color: green;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-bottom: 1px black solid;
+    border-top:none;
+    top: 12.5em;
+    left: 2em;
+    height: 2em;
+    width: 1em;
+    background-color: blue;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 1px black solid;
+    border-bottom: none;
+    top: 13.7em;
+    left: 6em;
+    height: 2em;
+    width: 1em;
+    background-color: violet;
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    border-left: none;
+    border-right:none;
+    top: 655px;
+    left: -20.4em;
+    height: 2em;
+    width: 74.5em;
+    background-color:#008B8B;
+
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+    border-left:none;
+    top: 36em;
+    left: -20.4em;
+    height: 2em;
+    width: 70em;
+    background-color:#008B8B;
+
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: none;
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    top: 31.3em;
+    left: 54em;
+    height: 11.7em;
+    width: 7em;
+    background-color:#008B8B;
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 4px #8a0303 solid;
+    border-bottom: 4px #8a0303 solid;
+    border-left: 4px #8a0303 solid;
+    border-right: none;
+    top: 18em;
+    left: -17.5em;
+    height: 11.7em;
+    width: 4.9em;
+    background-color:#008B8B;
+
+}
+
+#maze div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary+div.boundary {
+    border-top: 4px #8a0303 solid;
+    border-bottom: 4px #8a0303 solid;
+    border-right: 4px #8a0303 solid;
+    border-left: none;
+    top: 18em;
+    left: -23.5em;
+    height: 11.7em;
+    width: 4.9em;
+    background-color:#008B8B;
+
+}
+
+.movingbox1 {
+width: 100px;
+height: 200px;
+background-color: red;
+position:relative;
+animation:repeat;
+animation: moving1 6s infinite;
+}
+
+@keyframes moving1 {
+    0%   {background-color:#000a17; left:30em; top:30em;}
+    12%   {background-color:#004696; left:30em; top:25em;}
+    25%   {background-color:#000a17; left:30em; top:22em;}
+    38%   {background-color:#004696; left:30em; top:18em;}
+    47%   {background-color:#000a17; left:30em; top:22em;}
+    58%   {background-color:#004696; left:30em; top:25em;}
+    68%   {background-color:#000a17; left:30em; top:28em;}
+    89%   {background-color:#004696; left:30em; top:30em;}
+    100%  {background-color:#000a17; left:30em; top:30em;}
+
+
+
+
+}
+
+.movingbox2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position:relative;
+    animation:repeat;
+    animation: moving2 4s infinite;
+    }
+    
+    @keyframes moving2 {
+        0%   {background-color:#000a17; left:15em; top:30em;}
+        33%   {background-color:#004696; left:15em; top:25em;}
+        66%  {background-color:#000a17; left:15em; top:22em;}
+        66%  {background-color:#004696; left:15em; top:20em;}
+        66%  {background-color:#000a17; left:15em; top:18em;}
+        100%  {background-color:#004696; left:15em; top:20em;}
+        100%  {background-color:#000a17; left:15em; top:22em;}
+        100%  {background-color:#004696; left:15em; top:25em;}
+        100%  {background-color:#000a17; left:15em; top:30em;}
+
+
+
+    
+    }
+
+
+    .movingbox3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position:relative;
+        animation:repeat;
+        animation: moving3 3s infinite;
+        }
+        
+        @keyframes moving3 {
+            0%   {background-color:#000a17; left:-5em; top:10em;}
+            5%   {background-color:#004696; left:-5em; top:12em;}
+            10%  {background-color:#000a17; left:-5em; top:13em;}
+            15%  {background-color:#004696; left:-5em; top:15em;}
+            20%  {background-color:#000a17; left:-5em; top:18em;}
+            25%  {background-color:#004696; left:-5em; top:20em;}
+            30%  {background-color:#000a17; left:-5em; top:22em;}
+            35%  {background-color:#004696; left:-5em; top:24em;}
+            40%  {background-color:#000a17; left:-5em; top:26em;}
+            45%  {background-color:#004696; left:-5em; top:26em;}
+            50%  {background-color:#000a17; left:-5em; top:24em;}
+            55%  {background-color:#004696; left:-5em; top:22em;}
+            60%  {background-color:#000a17; left:-5em; top:20em;}
+            65%  {background-color:#004696; left:-5em; top:18em;}
+            70%  {background-color:#000a17; left:-5em; top:15em;}
+            80%  {background-color:#004696; left:-5em; top:13em;}
+            85%   {background-color:#000a17; left:-5em; top:12em;}
+            100%   {background-color:#000a17; left:-5em; top:10em;}
+
+
+
+    
+    
+    
+        
+        }
+
+         .movingbox4 {
+            width: 100px;
+            height: 170px;
+            background-color: red;
+            position:relative;
+            animation:repeat;
+            animation: moving4 4s infinite;
+            }
+            
+            @keyframes moving4 {
+                0%   {background-color:red; left:50em; top:6em;}
+                33%   {background-color:red; left:52em; top:6em;}
+                33%  {background-color:green; left:54em; top:6em;}
+                100%  {background-color:red; left:50em; top:6em;}
+        
+        
+        
+            
+            }
+
+            .movingbox5 {
+                width: 30px;
+                height: 10px;
+                background-color: red;
+                position:relative;
+                animation:repeat;
+                animation: moving5 1s infinite;
+                }
+                
+                @keyframes moving5 {
+                    0%   {background-color:#8a0303; left:-15em; top:-11.5em;}
+                    25%   {background-color:#8a0303; left:-17em; top:-11.5em;}
+                    45%   {background-color:#8a0303; left:-19em; top:-11.5em;}
+                    65%   {background-color:#8a0303; left:-22em; top:-11.5em;}
+                    100%   {background-color:#8a0303; left:-24em; top:-11.5em;}
+                    
+                
+                
+                
+                
+                }
+
+                .movingbox6 {
+                    width: 30px;
+                    height: 10px;
+                    background-color: red;
+                    position:relative;
+                    animation:repeat;
+                    animation: moving6 2s infinite;
+                    }
+                    
+                    @keyframes moving6 {
+                        0%   {background-color:#8a0303; left:-15em; top:-8em;}
+                        25%   {background-color:#8a0303; left:-17em; top:-8em;}
+                        45%   {background-color:#8a0303; left:-19em; top:-8em;}
+                        65%   {background-color:#8a0303; left:-22em; top:-8em;}
+                        100%   {background-color:#8a0303; left:-24em; top:-8em;}
+                        
+                    
+                    
+                    
+                    
+                    }
+
+                    .movingbox7 {
+                        width: 30px;
+                        height: 10px;
+                        background-color: red;
+                        position:relative;
+                        animation:repeat;
+                        animation: moving7 2s infinite;
+                        }
+                        
+                        @keyframes moving7 {
+                            0%   {background-color:#8a0303; left:-15em; top:-17em;}
+                            25%   {background-color:#8a0303; left:-17em; top:-17em;}
+                            45%   {background-color:#8a0303; left:-19em; top:-17em;}
+                            65%   {background-color:#8a0303; left:-22em; top:-17em;}
+                            100%   {background-color:#8a0303; left:-24em; top:-17em;}
+                            
+                        
+                        
+                        
+                        
+                        }
+
+                        .movingbox8 {
+                            width: 100px;
+                            height: 187px;
+                            background-color: red;
+                            position:relative;
+                            animation:repeat;
+                            animation: moving8 2s infinite;
+                            }
+                            
+                            @keyframes moving8 {
+                                0%   {background-color:red; left:18em; top:-35.7em;}
+                                33%   {background-color:red; left:20em; top:-35.7em;}
+                                33%  {background-color:green; left:22em; top:-35.7em;}
+                                100%  {background-color:red; left:18em; top:-35.7em;}
+                        
+                        
+                        
+                            
+                            }
+    
+                            .movingbox9 {
+                                width: 100px;
+                                height: 187px;
+                                background-color: red;
+                                position:relative;
+                                animation:repeat;
+                                animation: moving9 2s infinite;
+                                }
+                                
+                                @keyframes moving9 {
+                                    0%   {background-color:red; left:3em; top:-48.3em;}
+                                    33%   {background-color:red; left:5em; top:-48.3em;}
+                                    33%  {background-color:green; left:7em; top:-48.3em;}
+                                    100%  {background-color:red; left:3em; top:-48.3em;}
+                            
+                            
+                            
+                                
+                                }
+
+                                .movingbox10 {
+                                    width: 20px;
+                                    height: 50px;
+                                    background-color: red;
+                                    position:relative;
+                                    animation:repeat;
+                                    animation: moving10 4s infinite;
+                                    }
+                                    
+                                    @keyframes moving10 {
+                                        0%   {background-color:#605C3C; left:30em; top:-48.3em;}
+                                        50%   {background-color:#3C3B3F; left:30em; top:-51.3em;}
+                                        100%  {background-color:#605C3C; left:30em; top:-48.3em;}
+                                
+                                
+                                
+                                    
+                                    }
+                                    .movingbox11 {
+                                        width: 20px;
+                                        height: 50px;
+                                        background-color: red;
+                                        position:relative;
+                                        animation:repeat;
+                                        animation: moving11 4s infinite;
+                                        }
+                                        
+                                        @keyframes moving11 {
+                                            0%   {background-color:#800080; left:25em; top:-51em;}
+                                            50%   {background-color:#ffc0cb; left:25em; top:-54em;}
+                                            100%  {background-color:#800080; left:25em; top:-51em;}
+
+                                    
+                                    
+                                    
+                                        
+                                        }
+                                        .movingbox12 {
+                                            width: 20px;
+                                            height: 50px;
+                                            background-color: red;
+                                            position:relative;
+                                            animation:repeat;
+                                            animation: moving12 4s infinite;
+                                            }
+                                            
+                                            @keyframes moving12 {
+                                                0%   {background-color:#00F260; left:35em; top:-54em;}
+                                                50%   {background-color:#0575E6; left:35em; top:-58em;}
+                                                100%  {background-color:#00F260; left:35em; top:-54em;}
+                                        
+                                        
+                                        
+                                            
+                                            }
+                                            .movingbox13 {
+                                                width: 20px;
+                                                height: 50px;
+                                                background-color: red;
+                                                position:relative;
+                                                animation:repeat;
+                                                animation: moving13 4s infinite;
+                                                }
+                                                
+                                                @keyframes moving13 {
+                                                    0%   {background-color:#fc4a1a; left:40em; top:-57em;}
+                                                    50%   {background-color:#f7b733; left:40em; top:-61em;}
+                                                    100%  {background-color:#fc4a1a; left:40em; top:-57em;}
+                                            
+                                            
+                                            
+                                                
+                                                }
+                                                
+                                                .movingbox14 {
+                                                    width: 20px;
+                                                    height: 50px;
+                                                    background-color: red;
+                                                    position:relative;
+                                                    animation:repeat;
+                                                    animation: moving14 4s infinite;
+                                                    }
+                                                    
+                                                    @keyframes moving14 {
+                                                        0%   {background-color:#74ebd5; left:45em; top:-60em;}
+                                                        50%   {background-color:#ACB6E5; left:45em; top:-63em;}
+                                                        100%  {background-color:#74ebd5; left:45em; top:-60em;}
+                                                
+                                                
+                                                
+                                                    
+                                                    }
+                                                    .movingbox15 {
+                                                        width: 20px;
+                                                        height: 50px;
+                                                        background-color: red;
+                                                        position:relative;
+                                                        animation:repeat;
+                                                        animation: moving15 4s infinite;
+                                                        }
+                                                        
+                                                        @keyframes moving15 {
+                                                            0%   {background-color:#e1eec3; left:50em; top:-63em;}
+                                                            50%   {background-color:#f05053; left:50em; top:-66em;}
+                                                            100%  {background-color:#e1eec3; left:50em; top:-63em;}
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        }
+                                                        .movingbox16 {
+                                                            width: 20px;
+                                                            height: 50px;
+                                                            background-color: red;
+                                                            position:relative;
+                                                            animation:repeat;
+                                                            animation: moving16 4s infinite;
+                                                            }
+                                                            
+                                                            @keyframes moving16 {
+                                                                0%   {background-color:#22c1c3; left:55em; top:-66.2em;}
+                                                                50%   {background-color:#fdbb2d; left:55em; top:-69.2em;}
+                                                                100%  {background-color:#22c1c3; left:55em; top:-66.2em;}
+                                                        
+                                                        
+                                                        
+                                                            
+                                                            }
+
+    
+

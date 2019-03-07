@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="labyrint.css">
+    <!--Legge til en google font link for å forandre på hvilke type tekst vi bruker-->
+    <script src="labyrint.js"></script>
+    <!--<link rel="stylesheet" href="./html/projekt.html">-->
+    
+    <title>projekt</title>
+    <iframe src="maze.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+
+    
+    
+</head>
+
+<body>
+    <h2 id="status">Flytt musepekeren på "S" for å begynne.</h2>
+
+    <div> <div id="timer"> Gjennomfør labyrinten innen <span id="time">02:00</span> Minutter!</div></div>
+    <button type="submit"  onClick="refreshPage()">Start på nytt</button>
+
+
+
+    <!-- Dette lager veggene for spillet -->
+    <div id="maze">
+        <div id="start">S</div>
+        <div class="boundary" id="boundary1"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="boundary"></div>
+        <div class="movingbox1"></div>
+        <div class="movingbox2"></div>
+        <div class="movingbox3"></div>
+        <div class="movingbox4"></div>
+        <div class="movingbox5"></div>
+        <div class="movingbox6"></div>
+        <div class="movingbox7"></div>
+        <div class="movingbox8"></div>
+        <div class="movingbox9"></div>
+        <div class="movingbox10"></div>
+        <div class="movingbox11"></div>
+        <div class="movingbox12"></div>
+        <div class="movingbox13"></div>
+        <div class="movingbox14"></div>
+        <div class="movingbox15"></div>
+        <div class="movingbox16"></div>
+
+
+
+        <div id="end">E</div>
+    </div>
+
+
+
+
+</body>
+
+<script src="labyrint.js"></script>
+
+</html>
